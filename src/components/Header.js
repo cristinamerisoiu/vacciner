@@ -1,18 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import LoginButton from "../components/LoginButton";
+import SignupButton from "../components/SignupButton";
 
-const Header = styled.div`
+const HeaderStyled = styled.div`
   display: flex;
-  flex-direction: row;
   width: 375px;
   height: 64px;
   color: lightblue;
   opacity: 44%;
   border: 1px solid #707070;
+  justify-content: flex-end;
 `;
 
-export default Header;
-export function Login() {
-  return <LoginButton />;
+export default function Header() {
+  return (
+    <HeaderStyled>
+      <SignupButton>Login</SignupButton>
+      <SignupButton>Signup</SignupButton>
+    </HeaderStyled>
+  );
 }
