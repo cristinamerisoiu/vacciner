@@ -4,33 +4,32 @@ export default function Calendar() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="38.934"
-      height="41.818"
-      viewBox="0 0 38.934 41.818"
+      width="41.259"
+      height="44.315"
+      viewBox="0 0 41.259 44.315"
     >
       <g transform="translate(-2)">
         <path
-          id="Path_68"
-          d="M35.166,4V6.884H30.119V4h-17.3V6.884H7.768V4H2v7.931H40.934V4Z"
-          transform="translate(0 -1.116)"
+          d="M37.147,4V7.056H31.8V4H13.461V7.056H8.112V4H2v8.4H43.259V4Z"
+          transform="translate(0 -0.944)"
           fill="#fc3952"
         />
         <path
-          d="M7.768,15H2V46H40.934V15H7.768Z"
-          transform="translate(0 -4.185)"
+          d="M8.112,15H2V47.854H43.259V15H8.112Z"
+          transform="translate(0 -3.539)"
           fill="#edeada"
         />
         <path
-          d="M30.909,22H10V42.909H37.4V22ZM24.42,23.442h5.047v5.047H24.42Zm5.047,11.536H24.42V29.931h5.047ZM17.931,29.931h5.047v5.047H17.931Zm0-6.489h5.047v5.047H17.931Zm-6.489,0h5.047v5.047H11.442Zm0,6.489h5.047v5.047H11.442Zm5.047,11.536H11.442V36.42h5.047Zm6.489,0H17.931V36.42h5.047Zm6.489,0H24.42V36.42h5.047Zm6.489,0H30.909V36.42h5.047Zm0-6.489H30.909V29.931h5.047Zm-5.047-6.489V23.442h5.047v5.047Z"
-          transform="translate(-2.232 -6.138)"
+          d="M32.158,22H10V44.158H39.034V22Zm-6.876,1.528h5.348v5.348H25.281Zm5.348,12.225H25.281V30.4h5.348ZM18.4,30.4h5.348v5.348H18.4Zm0-6.876h5.348v5.348H18.4Zm-6.876,0h5.348v5.348H11.528Zm0,6.876h5.348v5.348H11.528Zm5.348,12.225H11.528V37.281h5.348Zm6.876,0H18.4V37.281h5.348Zm6.876,0H25.281V37.281h5.348Zm6.876,0H32.158V37.281h5.348Zm0-6.876H32.158V30.4h5.348Zm-5.348-6.876V23.528h5.348v5.348Z"
+          transform="translate(-1.888 -5.191)"
           fill="#cec9ae"
         />
         <rect width="5" height="6" transform="translate(8)" fill="#28384c" />
-        <rect width="5" height="6" transform="translate(30)" fill="#28384c" />
+        <rect width="5" height="6" transform="translate(32)" fill="#28384c" />
         <rect
-          width="5"
-          height="5"
-          transform="translate(22 24)"
+          width="6"
+          height="6"
+          transform="translate(23 25)"
           fill="#26b99a"
         />
       </g>
