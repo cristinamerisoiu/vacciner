@@ -3,11 +3,11 @@ import styled from "styled-components";
 import Calendar from "../icons/Calendar";
 import Faq from "../icons/Faq";
 import Medicine from "../icons/Medicine";
-import HomeButton from "../icons/HomeButton";
+import House from "../icons/House";
 
 const FooterPage = styled.div`
   display: flex;
-  width: 375px;
+  width: 100vw;
   height: 52px;
   background-color: #003459;
   border: solid 1px;
@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <>
       <FooterPage>
-        <HomeButton />
+        <House />
         <Medicine />
         <Calendar />
         <Faq />
