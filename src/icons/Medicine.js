@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Medicine() {
+export default function Medicine(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="49.139"
-      height="47.362"
+      width={props.width}
+      height="52.046"
       viewBox="0 0 49.139 47.362"
     >
       <g transform="translate(-0.001)">

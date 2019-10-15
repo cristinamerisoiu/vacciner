@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Calendar() {
+export default function Calendar(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="41.259"
-      height="44.315"
+      width={props.width}
+      height="41.818"
       viewBox="0 0 41.259 44.315"
     >
       <g transform="translate(-2)">

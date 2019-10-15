@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const ResultField = styled.div`
@@ -10,6 +9,4 @@ const ResultField = styled.div`
   background-color: #c5d5e4;
 `;
 
-export default function ResultTextContainer() {
-  return <ResultField />;
-}
+export default ResultField;
