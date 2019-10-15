@@ -4,7 +4,7 @@ import SignupButton from "../components/SignupButton";
 import TextFieldContainer from "../components/TextFieldContainer";
 import styled from "styled-components";
 
-const LoginFormStyled = styled.form`
+const LoginFormWrapper = styled.form`
   width: 100vw;
   height: 100vh;
 `;
@@ -25,7 +25,7 @@ export default function LoginForm() {
   return (
     <>
       <Globalstyles />
-      <LoginFormStyled>
+      <LoginFormWrapper>
         <DivEmail>
           <TextFieldContainer
             input
@@ -46,7 +46,7 @@ export default function LoginForm() {
           <SignupButton>Login</SignupButton>
           <SignupButton>Sign Up</SignupButton>
         </DivSignupButton>
-      </LoginFormStyled>
+      </LoginFormWrapper>
     </>
   );
 }

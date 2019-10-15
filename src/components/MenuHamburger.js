@@ -37,6 +37,10 @@ export const StyledMenu = styled.nav`
   }
 `;
 
+const TextWrapper = styled.span`
+  margin-left: 15px;
+`;
+
 export default function MenuHamburger() {
   return (
     <>
@@ -47,7 +51,7 @@ export default function MenuHamburger() {
             <span aria-label="standard vaccines">
               <Medicine width={30} />
             </span>
-            Standard vaccines
+            <TextWrapper> Standard vaccines</TextWrapper>
           </div>
         </a>
 
@@ -56,7 +60,7 @@ export default function MenuHamburger() {
             <span aria-label="track your vaccines">
               <Calendar width={25} />
             </span>
-            Track your vaccines
+            <TextWrapper>Track your vaccines</TextWrapper>
           </div>
         </a>
         <a href="/">
@@ -64,7 +68,7 @@ export default function MenuHamburger() {
             <span aria-label="faq">
               <Faq width={30} />
             </span>
-            Faq
+            <TextWrapper>Faq</TextWrapper>
           </div>
         </a>
         <a href="/">
@@ -72,7 +76,7 @@ export default function MenuHamburger() {
             <span aria-label="home">
               <House width={30} />
             </span>
-            Home
+            <TextWrapper> Home</TextWrapper>
           </div>
         </a>
       </StyledMenu>
