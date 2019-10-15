@@ -5,18 +5,18 @@ import TextFieldContainer from "../components/TextFieldContainer";
 import styled from "styled-components";
 
 const LoginFormWrapper = styled.form`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 `;
 
-const DivEmail = styled.div`
+const LoginWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 60px;
 `;
 
-const DivSignupButton = styled.div`
+const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
@@ -26,7 +26,7 @@ export default function LoginForm() {
     <>
       <Globalstyles />
       <LoginFormWrapper>
-        <DivEmail>
+        <LoginWrapper>
           <TextFieldContainer
             input
             type="email"
@@ -41,11 +41,11 @@ export default function LoginForm() {
             name="psw"
             required
           ></TextFieldContainer>
-        </DivEmail>
-        <DivSignupButton>
+        </LoginWrapper>
+        <ButtonWrapper>
           <SignupButton>Login</SignupButton>
           <SignupButton>Sign Up</SignupButton>
-        </DivSignupButton>
+        </ButtonWrapper>
       </LoginFormWrapper>
     </>
   );
