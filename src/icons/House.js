@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function House() {
+export default function House(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="51.856"
+      width={props.width}
       height="45.315"
       viewBox="0 0 51.856 45.315"
     >
