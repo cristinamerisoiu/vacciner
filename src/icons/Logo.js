@@ -21,7 +21,7 @@ export default function Logo() {
         letter-spacing="-0.02em"
       >
         <tspan x="-84.833" y="0">
-          V a c c i n e r{" "}
+          vaccine.log{" "}
         </tspan>
       </text>
     </svg>

@@ -3,20 +3,22 @@ import styled from "styled-components";
 import Calendar from "../icons/Calendar";
 import Faq from "../icons/Faq";
 import Medicine from "../icons/Medicine";
+import House from "../icons/House";
 
 const FooterPage = styled.div`
   display: flex;
-  width: 375px;
+  width: 100vw;
   height: 52px;
   background-color: #003459;
   border: solid 1px;
-  align-content: space-between;
+  justify-content: space-between;
 `;
 
 export default function Footer() {
   return (
     <>
       <FooterPage>
+        <House />
         <Medicine />
         <Calendar />
         <Faq />

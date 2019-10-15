@@ -7,6 +7,8 @@ const StartPageMain = styled.main`
   width: 100vw;
   height: 100vh;
   background: #e8f1f2;
+  align-items: center;
+  justify-content: center;
 `;
 
 export default function StartPage() {
