@@ -10,8 +10,9 @@ export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #00203f29;
-  height: 100%;
+  background: #00728f;
+  height: 70%;
+  margin-top: 48px;
   text-align: left;
   padding: 2rem;
   position: absolute;
@@ -23,6 +24,7 @@ export const StyledMenu = styled.nav`
     display: flex;
     align-items: center;
   }
+
   a {
     font-size: 12px;
     padding: 2rem 0;

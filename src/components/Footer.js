@@ -5,24 +5,26 @@ import Faq from "../icons/Faq";
 import Medicine from "../icons/Medicine";
 import House from "../icons/House";
 
-const FooterPage = styled.div`
+const FooterWrapper = styled.div`
   display: flex;
   width: 100vw;
   height: 52px;
   background-color: #003459;
   border: solid 1px;
   justify-content: space-between;
+  position: absolute;
+  bottom: 0;
 `;
 
 export default function Footer() {
   return (
     <>
-      <FooterPage>
+      <FooterWrapper>
         <House />
         <Medicine />
         <Calendar />
         <Faq />
-      </FooterPage>
+      </FooterWrapper>
     </>
   );
 }

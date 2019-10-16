@@ -13,5 +13,6 @@ body {
   width:100vw;
   height:100vh;
   background:#E8F1F2; 
+  position:fixed;
 }
 `;
