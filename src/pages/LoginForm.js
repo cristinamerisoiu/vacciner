@@ -1,12 +1,10 @@
 import React from "react";
-import Globalstyles from "../Globalstyles";
 import SignupButton from "../components/SignupButton";
 import TextFieldContainer from "../components/TextFieldContainer";
 import styled from "styled-components";
-
+import Footer from "../components/Footer";
 
 const LoginFormWrapper = styled.form`
-
   width: 100%;
   height: 100%;
 `;
@@ -26,10 +24,7 @@ const ButtonWrapper = styled.div`
 export default function LoginForm() {
   return (
     <>
-      <Globalstyles />
-
       <LoginFormWrapper>
-
         <LoginWrapper>
           <TextFieldContainer
             input
@@ -50,9 +45,8 @@ export default function LoginForm() {
           <SignupButton>Login</SignupButton>
           <SignupButton>Sign Up</SignupButton>
         </ButtonWrapper>
-
       </LoginFormWrapper>
-
+      <Footer />
     </>
   );
 }

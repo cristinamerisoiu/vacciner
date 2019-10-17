@@ -7,7 +7,7 @@ export default {
 
 export const TextField = () => (
   <>
-    <TextFieldContainer placeholder="Enter your vaccine" />
-    <TextFieldContainer placeholder="Select date" />
+    <TextFieldContainer type="text" placeholder="Enter your vaccine" />
+    <TextFieldContainer type="text" placeholder="Select date" />
   </>
 );
