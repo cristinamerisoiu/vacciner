@@ -5,7 +5,7 @@ import Faq from "../icons/Faq";
 import Medicine from "../icons/Medicine";
 import House from "../icons/House";
 
-const FooterWrapper = styled.div`
+const FooterWrapper = styled.footer`
   display: flex;
   width: 100vw;
   height: 52px;

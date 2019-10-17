@@ -3,7 +3,6 @@ import styled from "styled-components";
 import TextFieldContainer from "../components/TextFieldContainer";
 import SelectDate from "../components/SelectDate";
 import ResultTextContainer from "../components/ResultTextContainer";
-import Globalstyles from "../Globalstyles";
 import Headline from "../components/Headline";
 import Footer from "../components/Footer";
 
@@ -19,7 +18,6 @@ export default function TrackVaccines() {
     <>
       <Headline>Track your vaccines</Headline>
       <PageWrapper>
-        <Globalstyles />
         <TextFieldContainer type="text" placeholder="Enter your vaccine" />
         <TextFieldContainer type="text" placeholder="Select date" />
         <SelectDate>Select Date</SelectDate>

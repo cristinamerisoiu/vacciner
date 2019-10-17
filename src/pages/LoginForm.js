@@ -1,5 +1,4 @@
 import React from "react";
-import Globalstyles from "../Globalstyles";
 import SignupButton from "../components/SignupButton";
 import TextFieldContainer from "../components/TextFieldContainer";
 import styled from "styled-components";
@@ -25,7 +24,6 @@ const ButtonWrapper = styled.div`
 export default function LoginForm() {
   return (
     <>
-      <Globalstyles />
       <LoginFormWrapper>
         <LoginWrapper>
           <TextFieldContainer

@@ -4,7 +4,6 @@ import NavbarHamburger from "../components/NavbarHamburger";
 import Footer from "../components/Footer";
 import styled from "styled-components";
 import img from "../resources/DNA2.png";
-import Globalstyles from "../Globalstyles";
 
 const ImageWrapper = styled.div`
   background-size: 100% 100%;
@@ -20,7 +19,6 @@ const ImageWrapper = styled.div`
 export default function HomePage() {
   return (
     <>
-      <Globalstyles />
       <ImageWrapper>
         <NavbarHamburger />
         <MenuHamburger />
