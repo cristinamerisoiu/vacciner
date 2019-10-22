@@ -5,7 +5,7 @@ import SelectDate from "../components/SelectDate";
 import ResultTextContainer from "../components/ResultTextContainer";
 import Headline from "../components/Headline";
 import Footer from "../components/Footer";
-import SearchVaccines from "../components/SearchVaccines";
+import SearchBar from "../components/SearchBar";
 import { diseases } from "../api/diseases";
 
 const PageWrapper = styled.div`
@@ -38,7 +38,7 @@ export default function TrackVaccines({ handleInputChange }) {
     <>
       <Headline>Track your vaccines</Headline>
       <PageWrapper>
-        <SearchVaccines
+        <SearchBar
           handleInputChange={setSearch}
           onSearch={handleSearch}
           onChange={event => handleInputChange(event.target.value)}

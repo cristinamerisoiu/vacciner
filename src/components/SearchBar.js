@@ -18,7 +18,7 @@ const TextField = styled.input`
   }
 `;
 
-export default function SearchVaccines({ onSearch }) {
+export default function SearchBar({ onSearch }) {
   function handleInputChange(event) {
     const value = event.target.value;
     onSearch(value);
