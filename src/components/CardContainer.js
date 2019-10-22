@@ -7,7 +7,7 @@ const Card = styled.div`
   height: 472px;
   background-color: #e8f1f2;
   border: #707070 solid 1px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   border-radius: 25px;
   opacity: 0.4;
 `;

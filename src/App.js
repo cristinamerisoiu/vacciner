@@ -6,11 +6,13 @@ import StandardVaccines from "./pages/StandardVaccines";
 import TrackVaccines from "./pages/TrackVaccines";
 import LoginForm from "./pages/LoginForm";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <GlobalStyles />
+      <Footer />
       <Router>
         <Route exact path="/startpage" component={StartPage} />
         <Route path="/standardvaccines" component={StandardVaccines} />
@@ -18,6 +20,7 @@ function App() {
         <Route path="/trackvaccines" component={TrackVaccines} />
         <Route path="/loginform" component={LoginForm} />
       </Router>
+      <Footer />
     </>
   );
 }
