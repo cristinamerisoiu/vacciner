@@ -29,15 +29,27 @@ export const StyledBurger = styled.button`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+
+    :first-child {
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+    }
+
+    :nth-child(2) {
+      opacity: ${({ open }) => (open ? "0" : "1")};
+      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
+    }
+
+    :nth-child(3) {
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+    }
   }
 `;
 
-export default function NavbarHamburger() {
+export default function NavbarHamburger({ open, setOpen }) {
   return (
     <>
       <GlobalStyles />
-      <StyledBurger>
-        <div />
+      <StyledBurger open={open} onClick={() => setOpen(!open)}>
         <div />
         <div />
         <div />

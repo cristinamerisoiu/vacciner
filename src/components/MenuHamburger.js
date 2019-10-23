@@ -12,13 +12,15 @@ export const StyledMenu = styled.nav`
   justify-content: center;
   background: #00728f;
   height: 70%;
-  margin-top: 48px;
+  margin-top: 20px;
   text-align: left;
   padding: 2rem;
   position: absolute;
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+  border-radius: 20px;
 
   div {
     display: flex;
@@ -43,11 +45,11 @@ const TextWrapper = styled.span`
   margin-left: 15px;
 `;
 
-export default function MenuHamburger() {
+export default function MenuHamburger({ open }) {
   return (
     <>
       <GlobalStyles />
-      <StyledMenu>
+      <StyledMenu open={open}>
         <a href="/">
           <div>
             <span aria-label="standard vaccines">

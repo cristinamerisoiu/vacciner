@@ -7,14 +7,11 @@ import House from "../icons/House";
 
 const FooterWrapper = styled.nav`
   display: flex;
-  justify-content: space-between;
   width: 100vw;
   height: 52px;
   background-color: #003459;
   border: solid 1px;
-  justify-content: space-between;
-  position: absolute;
-  bottom: 0;
+  justify-content: space-around;
 `;
 
 export default function Footer() {
