@@ -2,7 +2,6 @@ import React from "react";
 import SignupButton from "../components/SignupButton";
 import TextFieldContainer from "../components/TextFieldContainer";
 import styled from "styled-components";
-import Footer from "../components/Footer";
 
 const LoginFormWrapper = styled.form`
   width: 100%;
@@ -46,7 +45,6 @@ export default function LoginForm() {
           <SignupButton>Sign Up</SignupButton>
         </ButtonWrapper>
       </LoginFormWrapper>
-      <Footer />
     </>
   );
 }

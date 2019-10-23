@@ -4,7 +4,6 @@ import TextFieldContainer from "../components/TextFieldContainer";
 import SelectDate from "../components/SelectDate";
 import ResultTextContainer from "../components/ResultTextContainer";
 import Headline from "../components/Headline";
-import Footer from "../components/Footer";
 import SearchBar from "../components/SearchBar";
 import { diseases } from "../api/diseases";
 
@@ -51,7 +50,6 @@ export default function TrackVaccines({ handleInputChange }) {
         <TextFieldContainer type="text" placeholder="Select date" />
         <SelectDate>Select Date</SelectDate>
         <ResultTextContainer />
-        <Footer />
       </PageWrapper>
     </>
   );
