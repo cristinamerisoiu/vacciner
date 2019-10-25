@@ -31,6 +31,7 @@ export default function TrackVaccines({ handleInputChange }) {
 
   function handleSearch(value) {
     setSearch(value);
+    console.log(search);
   }
 
   return (
@@ -44,7 +45,10 @@ export default function TrackVaccines({ handleInputChange }) {
         />
         {FilteredDiseases.map(disease => (
           <ResultDiseases key={disease} disease={disease}>
-            <SearchDisease>{disease}</SearchDisease>
+            <SearchDisease>
+              {disease}
+              <button onClick={() => console.log("HELlo")}>ADD</button>
+            </SearchDisease>
           </ResultDiseases>
         ))}
         <TextFieldContainer type="text" placeholder="Select date" />

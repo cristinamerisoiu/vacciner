@@ -34,7 +34,9 @@ export default function VaccineContent() {
         <DiseaseSummary> Babies:</DiseaseSummary>
         <DiseaseText>
           <ul>
-            <li>Hepatitis A</li>
+            <a href="https://www.who.int/news-room/fact-sheets/detail/hepatitis-a">
+              <li>Hepatitis A</li>
+            </a>
             <li>Rotavirus</li>
             <li>Diphthetria,tetanus & acellular pertussis</li>
             <li> Measles, mumps, rubella</li>

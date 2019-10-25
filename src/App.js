@@ -8,6 +8,7 @@ import LoginForm from "./pages/LoginForm";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import styled from "styled-components";
+import Hepatitis from "./components/Diseases";
 
 const StyledApp = styled.main`
   display: grid;
@@ -31,6 +32,7 @@ function App() {
           <Route path="/homepage" component={HomePage} />
           <Route path="/trackvaccines" component={TrackVaccines} />
           <Route path="/loginform" component={LoginForm} />
+          />
         </Router>
       </Container>
       <Footer />
