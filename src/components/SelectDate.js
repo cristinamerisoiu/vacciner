@@ -7,10 +7,11 @@ const CalendarInput = styled.input`
   font: 1rem "Fira Sans", sans-serif;
 `;
 
-export default function SelectDate() {
+export default function SelectDate({ date }) {
   return (
     <>
       <CalendarInput
+        {...date.toLocaleDateString()}
         type="date"
         name="vaccination-date"
         min="1990-01-01"

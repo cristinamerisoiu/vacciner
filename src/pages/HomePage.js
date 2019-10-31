@@ -3,6 +3,7 @@ import MenuHamburger from "../components/MenuHamburger";
 import NavbarHamburger from "../components/NavbarHamburger";
 import styled from "styled-components";
 import img from "../resources/DNA2.png";
+import ReactPlayer from "react-player";
 
 const ImageWrapper = styled.div`
   background-size: 100% 100%;
@@ -15,6 +16,11 @@ const ImageWrapper = styled.div`
   background-size: cover;
 `;
 
+const PlayerWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 90px;
+`;
 export default function HomePage() {
   const [open, setOpen] = useState(false);
   return (
@@ -22,6 +28,9 @@ export default function HomePage() {
       <ImageWrapper>
         <NavbarHamburger open={open} setOpen={setOpen} />
         <MenuHamburger open={open} setOpen={setOpen} />
+        <PlayerWrapper>
+          <ReactPlayer url="https://www.youtube.com/watch?v=y2WtUMvNjzQ" />
+        </PlayerWrapper>
       </ImageWrapper>
     </>
   );
