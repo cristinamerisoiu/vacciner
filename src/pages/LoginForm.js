@@ -23,6 +23,7 @@ const ButtonWrapper = styled.div`
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   function handleSubmit(event) {
     event.preventDefault();
   }
@@ -42,37 +43,33 @@ export default function LoginForm() {
   }
 
   return (
-    <>
-      <LoginFormWrapper>
-        <LoginWrapper onSubmit={handleSubmit}>
-          <TextFieldContainer
-            input
-            type="email"
-            placeholder="Enter Email"
-            name="email"
-            required
-            onChange={event => setEmail(event.target.value)}
-            value={email}
-          ></TextFieldContainer>
-          <TextFieldContainer
-            input
-            type="password"
-            placeholder="Enter Password"
-            name="psw"
-            required
-            onChange={event => setPassword(event.target.value)}
-            value={password}
-          ></TextFieldContainer>
-        </LoginWrapper>
-        <ButtonWrapper>
-          <SignupButton disabled={!validateForm()} type="submit">
-            Login
-          </SignupButton>
-          <SignupButton disabled={!validateForm()} type="submit">
-            Sign Up
-          </SignupButton>
-        </ButtonWrapper>
-      </LoginFormWrapper>
-    </>
+    <LoginFormWrapper>
+      <LoginWrapper onSubmit={handleSubmit}>
+        <TextFieldContainer
+          input
+          type="email"
+          placeholder="Enter Email"
+          required
+          onChange={event => setEmail(event.target.value)}
+          value={email}
+        />
+        <TextFieldContainer
+          input
+          type="password"
+          placeholder="Enter Password"
+          required
+          onChange={event => setPassword(event.target.value)}
+          value={password}
+        />
+      </LoginWrapper>
+      <ButtonWrapper>
+        <SignupButton disabled={!validateForm()} type="submit">
+          Login
+        </SignupButton>
+        <SignupButton disabled={!validateForm()} type="submit">
+          Sign Up
+        </SignupButton>
+      </ButtonWrapper>
+    </LoginFormWrapper>
   );
 }

@@ -5,10 +5,10 @@ import HomePage from "./pages/HomePage";
 import StandardVaccines from "./pages/StandardVaccines";
 import TrackVaccines from "./pages/TrackVaccines";
 import LoginForm from "./pages/LoginForm";
+import Faq from "./pages/Faq";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import styled from "styled-components";
-// import Hepatitis from "./components/Diseases";
 
 const StyledApp = styled.main`
   display: grid;
@@ -25,16 +25,17 @@ function App() {
   return (
     <StyledApp>
       <GlobalStyles />
-      <Container>
-        <Router>
+      <Router>
+        <Container>
+          <Route exact path="/" component={HomePage} />
           <Route exact path="/startpage" component={StartPage} />
           <Route path="/standardvaccines" component={StandardVaccines} />
-          <Route path="/homepage" component={HomePage} />
           <Route path="/trackvaccines" component={TrackVaccines} />
           <Route path="/loginform" component={LoginForm} />
-        </Router>
-      </Container>
-      <Footer />
+          <Route path="/faq" component={Faq} />
+        </Container>
+        <Footer />
+      </Router>
     </StyledApp>
   );
 }

@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const diseases = [
   "Hepatitis B",
   "Rotavirus",
@@ -15,3 +17,7 @@ export const diseases = [
   "Hpv",
   "Influenza"
 ];
+
+export function getDiseases() {
+  return axios.get("/diseases");
+}

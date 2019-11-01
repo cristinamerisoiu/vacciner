@@ -5,7 +5,7 @@ import styled from "styled-components";
 import img from "../resources/DNA2.png";
 import ReactPlayer from "react-player";
 
-const ImageWrapper = styled.div`
+const Container = styled.div`
   background-size: 100% 100%;
   background-image: url(${img});
   background-repeat: no-repeat;
@@ -16,22 +16,22 @@ const ImageWrapper = styled.div`
   background-size: cover;
 `;
 
-const PlayerWrapper = styled.div`
+const PlayerContainer = styled.div`
   display: flex;
   justify-content: center;
   padding-top: 90px;
 `;
+
 export default function HomePage() {
   const [open, setOpen] = useState(false);
+
   return (
-    <>
-      <ImageWrapper>
-        <NavbarHamburger open={open} setOpen={setOpen} />
-        <MenuHamburger open={open} setOpen={setOpen} />
-        <PlayerWrapper>
-          <ReactPlayer url="https://www.youtube.com/watch?v=y2WtUMvNjzQ" />
-        </PlayerWrapper>
-      </ImageWrapper>
-    </>
+    <Container>
+      <NavbarHamburger open={open} onClick={() => setOpen(!open)} />
+      <MenuHamburger open={open} />
+      <PlayerContainer>
+        <ReactPlayer url="https://www.youtube.com/watch?v=y2WtUMvNjzQ" />
+      </PlayerContainer>
+    </Container>
   );
 }

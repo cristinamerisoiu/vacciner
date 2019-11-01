@@ -51,5 +51,6 @@
     "nodemon": "^1.19.4",
     "prettier": "1.18.2",
     "proptypes": "^1.1.0"
-  }
+  },
+  "proxy": "http://localhost:3002"
 }

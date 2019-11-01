@@ -4,7 +4,6 @@ import Medicine from "../icons/Medicine";
 import Calendar from "../icons/Calendar";
 import Faq from "../icons/Faq";
 import House from "../icons/House";
-import GlobalStyles from "../Globalstyles";
 
 export const StyledMenu = styled.nav`
   display: flex;
@@ -48,14 +47,13 @@ const TextWrapper = styled.span`
 export default function MenuHamburger({ open }) {
   return (
     <>
-      <GlobalStyles />
       <StyledMenu open={open}>
         <a href="/">
           <div>
             <span aria-label="standard vaccines">
               <Medicine width={30} />
             </span>
-            <TextWrapper> Standard vaccines</TextWrapper>
+            <TextWrapper>Standard vaccines</TextWrapper>
           </div>
         </a>
 
@@ -80,7 +78,7 @@ export default function MenuHamburger({ open }) {
             <span aria-label="home">
               <House width={30} />
             </span>
-            <TextWrapper> Home</TextWrapper>
+            <TextWrapper>Home</TextWrapper>
           </div>
         </a>
       </StyledMenu>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const TextField = styled.input`
+const TextFieldContainer = styled.input`
   display: flex;
   flex-direction: column;
   width: 330px;
@@ -17,4 +17,4 @@ const TextField = styled.input`
   }
 `;
 
-export default TextField;
+export default TextFieldContainer;
