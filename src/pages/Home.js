@@ -52,7 +52,7 @@ const Container = styled.div`
 //   height: 100%;
 // `;
 
-export default function HomePage() {
+export default function Home() {
   const [open, setOpen] = useState(false);
 
   return (

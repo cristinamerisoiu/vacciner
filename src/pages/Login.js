@@ -25,7 +25,7 @@ const TitleLogin = styled.h2`
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
 `;
-export default function LoginForm() {
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 

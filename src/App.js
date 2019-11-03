@@ -1,10 +1,10 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
-import StartPage from "./pages/StartPage";
-import HomePage from "./pages/HomePage";
-import StandardVaccines from "./pages/StandardVaccines";
+import Start from "./pages/Start";
+import Home from "./pages/Home";
+import Standard from "./pages/Standard";
 import TrackVaccines from "./pages/TrackVaccines";
-import LoginForm from "./pages/LoginForm";
+import Login from "./pages/Login";
 import Faq from "./pages/Faq";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -27,11 +27,11 @@ function App() {
       <GlobalStyles />
       <Router>
         <Container>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/startpage" component={StartPage} />
-          <Route path="/standardvaccines" component={StandardVaccines} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/start" component={Start} />
+          <Route path="/standard" component={Standard} />
           <Route path="/trackvaccines" component={TrackVaccines} />
-          <Route path="/loginform" component={LoginForm} />
+          <Route path="/login" component={Login} />
           <Route path="/faq" component={Faq} />
         </Container>
         <Footer />
