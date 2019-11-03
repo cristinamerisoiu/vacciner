@@ -1,5 +1,5 @@
 import React from "react";
-import GlobalStyles from "./Globalstyles";
+import GlobalStyles from "./GlobalStyles";
 import StartPage from "./pages/StartPage";
 import HomePage from "./pages/HomePage";
 import StandardVaccines from "./pages/StandardVaccines";

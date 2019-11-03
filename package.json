@@ -1,6 +1,7 @@
 {
   "name": "vacciner",
   "version": "0.1.0",
+  "author": "cristinamerisoiu",
   "private": true,
   "dependencies": {
     "@hapi/joi": "^16.1.7",
