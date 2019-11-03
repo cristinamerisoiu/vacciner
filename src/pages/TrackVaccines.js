@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import TextFieldContainer from "../components/TextFieldContainer";
 import ResultTextContainer from "../components/ResultTextContainer";
 import Headline from "../components/Headline";
 import SearchBar from "../components/SearchBar";
 import { diseases } from "../api/diseases";
 import axios from "axios";
-import SelectDate from "../components/SelectDate";
+import DatePicker from "react-datepicker";
 
 const PageWrapper = styled.div`
   display: flex;
@@ -41,6 +40,16 @@ const ButtonAdd = styled.button`
   }
 `;
 
+const DateWrapper = styled.div`
+  display: flex;
+  border: transparent;
+  width: 330px;
+  height: 45px;
+  justify-content: space-around;
+  align-items: center;
+  color: #66023c;
+`;
+
 export default function TrackVaccines({ handleInputChange }) {
   const [search, setSearch] = useState("aaa");
 
@@ -48,7 +57,7 @@ export default function TrackVaccines({ handleInputChange }) {
     disease.toLowerCase().includes(search.toLowerCase())
   );
 
-  const [date, setDate] = useState();
+  const [startDate, setStartDate] = useState(new Date());
 
   function addToDbJson(disease) {
     axios
@@ -73,10 +82,10 @@ export default function TrackVaccines({ handleInputChange }) {
     console.log(search);
   }
 
-  function onChange(date) {
-    setDate(date);
-    console.log("the date was clicked");
-  }
+  // function onChange(date) {
+  //   setDate(date);
+  //   console.log("the date was clicked");
+  // }
 
   return (
     <>
@@ -95,18 +104,14 @@ export default function TrackVaccines({ handleInputChange }) {
             </ButtonAdd>
           </ResultDiseases>
         ))}
-        <TextFieldContainer />
-        <SelectDate value={date} onChange={() => onChange(setDate)} />
-
-        {/* // type="text"
-          // name="daterange"
-          // value="01/01/2018 - 01/15/2018"
-          // name="vaccination-date"
-          // min="1990-01-01"
-          // max="2999-12-31"
-          // placeholder="Select date"
-        /> */}
-        {/* <SelectDate value={date} onChange={() => onChange(setDate)} /> */}
+        <DateWrapper>
+          {" "}
+          Select Date:
+          <DatePicker
+            selected={startDate}
+            onChange={date => setStartDate(date)}
+          />
+        </DateWrapper>
         <ResultTextContainer />
       </PageWrapper>
     </>

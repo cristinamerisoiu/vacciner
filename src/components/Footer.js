@@ -4,6 +4,7 @@ import Calendar from "../icons/Calendar";
 import Faq from "../icons/Faq";
 import Medicine from "../icons/Medicine";
 import House from "../icons/House";
+import Key from "../icons/Key";
 import { Link } from "react-router-dom";
 
 const FooterWrapper = styled.nav`
@@ -26,11 +27,14 @@ export default function Footer() {
         <Link to="/standardvaccines">
           <Medicine />
         </Link>
-        <Link to="/TrackVaccines">
+        <Link to="/trackvaccines">
           <Calendar />
         </Link>
-        <Link to="/Faq">
+        <Link to="/faq">
           <Faq />
+        </Link>
+        <Link to="/loginform">
+          <Key />
         </Link>
       </FooterWrapper>
     </>
