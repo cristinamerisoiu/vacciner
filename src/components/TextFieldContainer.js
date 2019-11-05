@@ -3,6 +3,7 @@ import styled from "styled-components";
 const TextFieldContainer = styled.input`
   display: flex;
   flex-direction: column;
+
   width: 330px;
   height: 45px;
   border-radius: 20px;

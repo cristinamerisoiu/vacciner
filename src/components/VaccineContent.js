@@ -30,39 +30,47 @@ const DiseaseText = styled.div`
 `;
 
 export default function VaccineContent() {
-  const [diseases, setDiseases] = useState();
+  const [diseases, setDiseases] = useState(false);
 
   useEffect(() => {
     getDiseases()
       .then(response => {
-        console.log(response);
+        console.log(response.data);
         setDiseases(response.data);
       })
       .catch(error => {
         console.log(error);
       });
-  });
+  }, []);
 
   return (
     <>
-      {diseases.map(disease => (
-        <Disease key={disease.title}>
-          <DiseaseSummary>{disease.title}:</DiseaseSummary>
-          <DiseaseText>
-            <ul>
-              {disease.vaccines.map(vaccine => (
-                <div key={vaccine.title}>
-                  <a href={vaccine.href}>
-                    <li>{vaccine.title}</li>
-                  </a>
-                  <p>{vaccine.text}</p>
-                </div>
-              ))}
-            </ul>
-          </DiseaseText>
-        </Disease>
-      ))}
-      <Disclaimer />
+      {diseases && (
+        <>
+          {diseases.map(disease => {
+            return (
+              <Disease>
+                <DiseaseSummary key={disease.id}>
+                  {disease.title}:
+                </DiseaseSummary>
+                <DiseaseText>
+                  <div>
+                    {disease.vaccines.map(vaccine => (
+                      <div key={vaccine.title}>
+                        <a href={vaccine.href}>
+                          <div key={disease.id}>{vaccine.title}</div>
+                        </a>
+                        <p key={disease.id}>{vaccine.text}</p>
+                      </div>
+                    ))}
+                  </div>
+                </DiseaseText>
+              </Disease>
+            );
+          })}
+          <Disclaimer />
+        </>
+      )}
     </>
   );
 }

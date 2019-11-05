@@ -4,8 +4,10 @@ import ResultTextContainer from "../components/ResultTextContainer";
 import Headline from "../components/Headline";
 import SearchBar from "../components/SearchBar";
 import { diseases } from "../api/diseases";
+import { diseasesFind } from "../api/diseasesFind";
 import axios from "axios";
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
+import SelectDate from "../components/SelectDate";
 
 const PageWrapper = styled.div`
   display: flex;
@@ -42,12 +44,22 @@ const ButtonAdd = styled.button`
 
 const DateWrapper = styled.div`
   display: flex;
-  border: transparent;
+  flex-direction: column;
   width: 330px;
   height: 45px;
-  justify-content: space-around;
+  border-radius: 20px;
+  background-color: white;
+  border: #707070 solid 1px;
+  opacity: 0.5;
+  margin-top: 10px;
+  padding: 7px;
+  text-align: center;
+  justify-content: center;
   align-items: center;
-  color: #66023c;
+
+  &::placeholder {
+    color: grey;
+  }
 `;
 
 export default function TrackVaccines({ handleInputChange }) {
@@ -61,8 +73,8 @@ export default function TrackVaccines({ handleInputChange }) {
 
   function addToDbJson(disease) {
     axios
-      .post("http://localhost:3002/diseases", {
-        diseases
+      .post("/diseases", {
+        disease
       })
       .then(resp => {
         console.log(resp.data);
@@ -74,7 +86,7 @@ export default function TrackVaccines({ handleInputChange }) {
 
   function handleClick(disease) {
     addToDbJson(disease);
-    console.log("The link was clicked.");
+    console.log(`Link was clicked - data: ${disease}`);
   }
 
   function handleSearch(value) {
@@ -86,6 +98,7 @@ export default function TrackVaccines({ handleInputChange }) {
   //   setDate(date);
   //   console.log("the date was clicked");
   // }
+  const foundDisease = diseasesFind.find(disease => disease.id);
 
   return (
     <>
@@ -104,15 +117,20 @@ export default function TrackVaccines({ handleInputChange }) {
             </ButtonAdd>
           </ResultDiseases>
         ))}
+
         <DateWrapper>
-          {" "}
-          Select Date:
-          <DatePicker
+          <SelectDate
             selected={startDate}
             onChange={date => setStartDate(date)}
           />
         </DateWrapper>
-        <ResultTextContainer />
+
+        <ResultTextContainer>
+          <div>
+            <h4>Vaccine: {foundDisease.id}</h4>
+            <h4>Date:</h4>
+          </div>
+        </ResultTextContainer>
       </PageWrapper>
     </>
   );

@@ -24,7 +24,7 @@ export default function Footer() {
         <Link to="/">
           <House />
         </Link>
-        <Link to="/standardvaccines">
+        <Link to="/standard">
           <Medicine />
         </Link>
         <Link to="/trackvaccines">
@@ -33,7 +33,7 @@ export default function Footer() {
         <Link to="/faq">
           <Faq />
         </Link>
-        <Link to="/loginform">
+        <Link to="/login">
           <Key />
         </Link>
       </FooterWrapper>

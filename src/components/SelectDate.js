@@ -2,9 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const CalendarInput = styled.input`
-  margin: 1rem;
   border-radius: 5px;
-  font: 1rem "Fira Sans", sans-serif;
+  font: 1em "Fira Sans", sans-serif;
+  color: grey;
+  border: none;
+  margin: 3px 5px 0 5px;
 `;
 
 export default function SelectDate() {

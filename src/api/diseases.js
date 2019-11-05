@@ -19,5 +19,5 @@ export const diseases = [
 ];
 
 export function getDiseases() {
-  return axios.get("/diseases");
+  return axios.get("/diseasesContent");
 }

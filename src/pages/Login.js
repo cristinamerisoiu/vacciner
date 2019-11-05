@@ -28,6 +28,8 @@ const TitleLogin = styled.h2`
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [signUpEmail, setSignUpEmail] = useState("");
+  const [signUpPassword, setSignUpPassword] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -83,16 +85,16 @@ export default function Login() {
             type="email"
             placeholder="Enter Email"
             required
-            onChange={event => setEmail(event.target.value)}
-            value={email}
+            onChange={event => setSignUpEmail(event.target.value)}
+            value={signUpEmail}
           />
           <TextFieldContainer
             input
             type="password"
             placeholder="Enter Password"
             required
-            onChange={event => setPassword(event.target.value)}
-            value={password}
+            onChange={event => setSignUpPassword(event.target.value)}
+            value={signUpPassword}
           />
           <ButtonWrapper>
             <SignupButton disabled={!validateForm()} type="submit">
