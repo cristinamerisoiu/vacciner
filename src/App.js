@@ -1,10 +1,11 @@
 import React from "react";
-import GlobalStyles from "./Globalstyles";
-import StartPage from "./pages/StartPage";
-import HomePage from "./pages/HomePage";
-import StandardVaccines from "./pages/StandardVaccines";
+import GlobalStyles from "./GlobalStyles";
+import Start from "./pages/Start";
+import Home from "./pages/Home";
+import Standard from "./pages/Standard";
 import TrackVaccines from "./pages/TrackVaccines";
-import LoginForm from "./pages/LoginForm";
+import Login from "./pages/Login";
+import Faq from "./pages/Faq";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import styled from "styled-components";
@@ -24,16 +25,17 @@ function App() {
   return (
     <StyledApp>
       <GlobalStyles />
-      <Container>
-        <Router>
-          <Route exact path="/startpage" component={StartPage} />
-          <Route path="/standardvaccines" component={StandardVaccines} />
-          <Route path="/homepage" component={HomePage} />
+      <Router>
+        <Container>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/start" component={Start} />
+          <Route path="/standard" component={Standard} />
           <Route path="/trackvaccines" component={TrackVaccines} />
-          <Route path="/loginform" component={LoginForm} />
-        </Router>
-      </Container>
-      <Footer />
+          <Route path="/login" component={Login} />
+          <Route path="/faq" component={Faq} />
+        </Container>
+        <Footer />
+      </Router>
     </StyledApp>
   );
 }

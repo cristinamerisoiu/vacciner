@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-const TextField = styled.input`
+const TextFieldContainer = styled.input`
   display: flex;
   flex-direction: column;
+
   width: 330px;
   height: 45px;
   border-radius: 20px;
@@ -17,4 +18,4 @@ const TextField = styled.input`
   }
 `;
 
-export default TextField;
+export default TextFieldContainer;

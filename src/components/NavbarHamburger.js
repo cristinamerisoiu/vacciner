@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import GlobalStyles from "../Globalstyles";
 
 export const StyledBurger = styled.button`
   position: absolute;
@@ -45,11 +44,10 @@ export const StyledBurger = styled.button`
   }
 `;
 
-export default function NavbarHamburger({ open, setOpen }) {
+export default function NavbarHamburger({ open, onClick }) {
   return (
     <>
-      <GlobalStyles />
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+      <StyledBurger open={open} onClick={onClick}>
         <div />
         <div />
         <div />

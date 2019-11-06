@@ -4,6 +4,8 @@ import Calendar from "../icons/Calendar";
 import Faq from "../icons/Faq";
 import Medicine from "../icons/Medicine";
 import House from "../icons/House";
+import Key from "../icons/Key";
+import { Link } from "react-router-dom";
 
 const FooterWrapper = styled.nav`
   display: flex;
@@ -12,24 +14,28 @@ const FooterWrapper = styled.nav`
   background-color: #003459;
   border: solid 1px;
   justify-content: space-around;
+  padding: 4px;
 `;
 
 export default function Footer() {
   return (
     <>
       <FooterWrapper>
-        <a href="/HomePage/">
+        <Link to="/">
           <House />
-        </a>
-        <a href="/StandardVaccines/">
+        </Link>
+        <Link to="/standard">
           <Medicine />
-        </a>
-        <a href="/TrackVaccines/">
+        </Link>
+        <Link to="/trackvaccines">
           <Calendar />
-        </a>
-        <a href="/Faq/">
+        </Link>
+        <Link to="/faq">
           <Faq />
-        </a>
+        </Link>
+        <Link to="/login">
+          <Key />
+        </Link>
       </FooterWrapper>
     </>
   );

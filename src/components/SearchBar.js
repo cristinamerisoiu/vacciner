@@ -12,7 +12,7 @@ const TextField = styled.input`
   opacity: 0.5;
   margin-top: 10px;
   text-align: center;
-
+  font-size: 16px;
   &::placeholder {
     color: grey;
   }

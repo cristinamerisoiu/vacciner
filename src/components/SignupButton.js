@@ -6,7 +6,7 @@ const SignupButton = styled.button`
   border-radius: 10px;
   background-color: white;
   box-shadow: #e1e1e1 solid 3px;
-  margin: 5px;
+  margin: 10px;
   opacity: 0.5;
 `;
 

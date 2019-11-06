@@ -5,12 +5,12 @@ export default function Faq(props) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={props.width}
-      height="46.315"
+      height="44"
       viewBox="0 0 46.315 46.315"
     >
       <path
         d="M46.315,23.158A23.158,23.158,0,1,1,23.158,0,23.157,23.157,0,0,1,46.315,23.158Zm0,0"
-        fill="#ff5931"
+        fill="#e74424"
       />
       <g transform="translate(7.619 5.066)">
         <path

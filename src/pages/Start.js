@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Logo from "../icons/Logo";
 
-const StartPageMain = styled.main`
+const StartMain = styled.main`
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -11,12 +11,12 @@ const StartPageMain = styled.main`
   justify-content: center;
 `;
 
-export default function StartPage() {
+export default function Start() {
   return (
     <>
-      <StartPageMain>
+      <StartMain>
         <Logo />
-      </StartPageMain>
+      </StartMain>
     </>
   );
 }

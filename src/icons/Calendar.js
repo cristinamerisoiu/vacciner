@@ -5,14 +5,14 @@ export default function Calendar(props) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={props.width}
-      height="41.818"
+      height="44"
       viewBox="0 0 41.259 44.315"
     >
       <g transform="translate(-2)">
         <path
           d="M37.147,4V7.056H31.8V4H13.461V7.056H8.112V4H2v8.4H43.259V4Z"
           transform="translate(0 -0.944)"
-          fill="#fc3952"
+          fill="#e74424"
         />
         <path
           d="M8.112,15H2V47.854H43.259V15H8.112Z"
