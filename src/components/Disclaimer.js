@@ -14,6 +14,8 @@ const DisclaimerText = styled.small`
   font-size: 0.7em;
   color: #66023c;
   font-family: "Open Sans", sans-serif;
+  padding: 10px;
+  text-align: justify;
 `;
 
 export default function Disclaimer() {

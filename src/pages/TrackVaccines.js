@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import ResultTextContainer from "../components/ResultTextContainer";
 import Headline from "../components/Headline";
 import SearchBar from "../components/SearchBar";
 import { diseases } from "../api/diseases";
-import { diseasesFind } from "../api/diseasesFind";
+// import { diseasesFind } from "../api/diseasesFind";
 import axios from "axios";
 // import DatePicker from "react-datepicker";
 import SelectDate from "../components/SelectDate";
@@ -70,11 +70,12 @@ export default function TrackVaccines({ handleInputChange }) {
   );
 
   const [startDate, setStartDate] = useState(new Date());
-
+  const [data, setData] = useState([]);
   function addToDbJson(disease) {
     axios
       .post("/diseases", {
-        disease
+        disease,
+        startDate
       })
       .then(resp => {
         console.log(resp.data);
@@ -84,8 +85,21 @@ export default function TrackVaccines({ handleInputChange }) {
       });
   }
 
+  useEffect(() => {
+    axios
+      .get("/diseasesContent")
+      .then(resp => {
+        console.log(resp.data);
+        setData(resp.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
+
   function handleClick(disease) {
     addToDbJson(disease);
+    alert(`${disease} added to your log`);
     console.log(`Link was clicked - data: ${disease}`);
   }
 
@@ -98,7 +112,7 @@ export default function TrackVaccines({ handleInputChange }) {
   //   setDate(date);
   //   console.log("the date was clicked");
   // }
-  const foundDisease = diseasesFind.find(disease => disease.id);
+  // const foundDisease = diseasesFind.find(disease => disease.id);
 
   return (
     <>
@@ -126,8 +140,9 @@ export default function TrackVaccines({ handleInputChange }) {
         </DateWrapper>
 
         <ResultTextContainer>
+          {data.map(disease => disease.disease)}
           <div>
-            <h4>Vaccine: {foundDisease.id}</h4>
+            <h4>Vaccine:</h4>
             <h4>Date:</h4>
           </div>
         </ResultTextContainer>

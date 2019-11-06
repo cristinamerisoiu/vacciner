@@ -4,7 +4,6 @@ import Disclaimer from "../components/Disclaimer";
 import { getDiseases } from "../api/diseases";
 
 const Disease = styled.details`
-  display: flex;
   width: 100px;
   flex-direction: column;
   padding: 15px;
@@ -22,11 +21,17 @@ const DiseaseText = styled.div`
   display: flex;
   background-color: #edf2f4;
   box-shadow: 1px 1px 2px grey;
-  color: #66023c;
+  color: #696969;
   width: 15rem;
   font-family: "Roboto", sans-serif;
   border-radius: 10px;
   margin-top: 2px;
+`;
+
+const StyledDiv = styled.div`
+  display: flex;
+  color: #696969;
+  padding-left: 5px;
 `;
 
 export default function VaccineContent() {
@@ -35,7 +40,7 @@ export default function VaccineContent() {
   useEffect(() => {
     getDiseases()
       .then(response => {
-        console.log(response.data);
+        console.log(response);
         setDiseases(response.data);
       })
       .catch(error => {
@@ -56,12 +61,12 @@ export default function VaccineContent() {
                 <DiseaseText>
                   <div>
                     {disease.vaccines.map(vaccine => (
-                      <div key={vaccine.title}>
+                      <StyledDiv key={vaccine.title}>
                         <a href={vaccine.href}>
                           <div key={disease.id}>{vaccine.title}</div>
                         </a>
                         <p key={disease.id}>{vaccine.text}</p>
-                      </div>
+                      </StyledDiv>
                     ))}
                   </div>
                 </DiseaseText>

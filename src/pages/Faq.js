@@ -21,7 +21,7 @@ const FaqText = styled.div`
   display: flex;
   background-color: #edf2f4;
   box-shadow: 1px 1px 2px grey;
-  color: #66023c;
+  color: #696969;
   width: 15rem;
   font-family: "Roboto", sans-serif;
   border-radius: 10px;

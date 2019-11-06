@@ -8,6 +8,7 @@ const ResultField = styled.div`
   border-radius: 15px;
   border: #707070 solid 1px;
   background-color: #fff;
+  opacity: 0.5;
 `;
 
 export default ResultField;
