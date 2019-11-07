@@ -1,7 +1,8 @@
-// import React, { useState } from "react";
-// import MenuHamburger from "../components/MenuHamburger";
-// import NavbarHamburger from "../components/NavbarHamburger";
-// import styled from "styled-components";
+import React, { useState } from "react";
+import MenuHamburger from "../components/MenuHamburger";
+import Navigation from "../components/Navigation";
+import styled from "styled-components";
+import Logo from "../icons/Logo";
 // import img from "../resources/DNA2.png";
 // // import ReactPlayer from "react-player";
 
@@ -68,10 +69,6 @@
 //   );
 // }
 
-import React from "react";
-import styled from "styled-components";
-import Logo from "../icons/Logo";
-
 const StartMain = styled.main`
   display: flex;
   width: 100vw;
@@ -82,9 +79,12 @@ const StartMain = styled.main`
 `;
 
 export default function Start() {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <StartMain>
+        <Navigation open={open} onClick={() => setOpen(!open)} />
+        <MenuHamburger open={open} />
         <Logo />
       </StartMain>
     </>

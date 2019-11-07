@@ -2,8 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Medicine from "../icons/Medicine";
 import Calendar from "../icons/Calendar";
-import Faq from "../icons/Faq";
+import FaqIcon from "../icons/FaqIcon";
 import House from "../icons/House";
+import { Link } from "react-router-dom";
+import Key from "../icons/Key";
 
 export const StyledMenu = styled.nav`
   display: flex;
@@ -43,44 +45,65 @@ export const StyledMenu = styled.nav`
 const TextWrapper = styled.span`
   margin-left: 15px;
 `;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
 
 export default function MenuHamburger({ open }) {
   return (
     <>
       <StyledMenu open={open}>
-        <a href="/">
-          <div>
-            <span aria-label="standard vaccines">
-              <Medicine width={30} />
-            </span>
-            <TextWrapper>Standard vaccines</TextWrapper>
-          </div>
-        </a>
+        <StyledLink to="/standard">
+          <a href="/">
+            <div>
+              <span aria-label="standard vaccines">
+                <Medicine width={30} />
+              </span>
+              <TextWrapper>Standard vaccines</TextWrapper>
+            </div>
+          </a>
+        </StyledLink>
 
-        <a href="/">
-          <div>
-            <span aria-label="track your vaccines">
-              <Calendar width={25} />
-            </span>
-            <TextWrapper>Track your vaccines</TextWrapper>
-          </div>
-        </a>
-        <a href="/">
+        <StyledLink to="/trackvaccines">
+          <a href="/">
+            <div>
+              <span aria-label="track your vaccines">
+                <Calendar width={25} />
+              </span>
+              <TextWrapper>Track your vaccines</TextWrapper>
+            </div>
+          </a>
+        </StyledLink>
+        <StyledLink to="/faq">
+          {/* <a href="/"> */}
           <div>
             <span aria-label="faq">
-              <Faq width={30} />
+              <FaqIcon width={30} />
             </span>
             <TextWrapper>Faq</TextWrapper>
           </div>
-        </a>
-        <a href="/">
-          <div>
-            <span aria-label="home">
-              <House width={30} />
-            </span>
-            <TextWrapper>Home</TextWrapper>
-          </div>
-        </a>
+          {/* </a> */}
+        </StyledLink>
+        <StyledLink to="/">
+          <a href="/">
+            <div>
+              <span aria-label="home">
+                <House width={30} />
+              </span>
+              <TextWrapper>Home</TextWrapper>
+            </div>
+          </a>
+        </StyledLink>
+        <StyledLink to="/login">
+          <a href="/">
+            <div>
+              <span aria-label="login">
+                <Key width={25} />
+              </span>
+              <TextWrapper>My account</TextWrapper>
+            </div>
+          </a>
+        </StyledLink>
       </StyledMenu>
     </>
   );

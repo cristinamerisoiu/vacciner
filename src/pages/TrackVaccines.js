@@ -140,11 +140,16 @@ export default function TrackVaccines({ handleInputChange }) {
         </DateWrapper>
 
         <ResultTextContainer>
-          {data.map(disease => disease.disease)}
+          return (
           <div>
-            <h4>Vaccine:</h4>
+            {/* {disease.disease} */}
+            <h4>Vaccine: {search}</h4>
             <h4>Date:</h4>
           </div>
+          );
+          {/* {data.map(disease => {
+            
+          })} */}
         </ResultTextContainer>
       </PageWrapper>
     </>

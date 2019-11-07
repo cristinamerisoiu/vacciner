@@ -3,6 +3,7 @@ import SignupButton from "../components/SignupButton";
 import TextFieldContainer from "../components/TextFieldContainer";
 import styled from "styled-components";
 import Headline from "../components/Headline";
+import Footer from "../components/Footer";
 
 const LoginFormWrapper = styled.form`
   width: 100%;
@@ -103,6 +104,7 @@ export default function Login() {
           </ButtonWrapper>
         </LoginWrapper>
       </LoginFormWrapper>
+      <Footer />
     </>
   );
 }

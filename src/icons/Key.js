@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Key() {
+export default function Key(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="44"
+      width={props.width}
       height="44"
       viewBox="0 0 41.379 41.379"
       fill="#e74424"

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Faq(props) {
+export default function FaqIcon(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
