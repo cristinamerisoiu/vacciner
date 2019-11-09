@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Calendar from "../icons/Calendar";
-import Faq from "../icons/Faq";
+import FaqIcon from "../icons/FaqIcon";
 import Medicine from "../icons/Medicine";
 import House from "../icons/House";
 import Key from "../icons/Key";
@@ -15,6 +15,7 @@ const FooterWrapper = styled.nav`
   border: solid 1px;
   justify-content: space-around;
   padding: 4px;
+  position: sticky;
 `;
 
 export default function Footer() {
@@ -31,7 +32,7 @@ export default function Footer() {
           <Calendar />
         </Link>
         <Link to="/faq">
-          <Faq />
+          <FaqIcon />
         </Link>
         <Link to="/login">
           <Key />

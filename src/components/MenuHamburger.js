@@ -2,16 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import Medicine from "../icons/Medicine";
 import Calendar from "../icons/Calendar";
-import Faq from "../icons/Faq";
+import FaqIcon from "../icons/FaqIcon";
 import House from "../icons/House";
+import { Link } from "react-router-dom";
+import Key from "../icons/Key";
 
 export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #00728f;
-  height: 70%;
-  margin-top: 20px;
+  background: #003459;
+  height: 100%;
+  /* margin-top: 20px; */
   text-align: left;
   padding: 2rem;
   position: absolute;
@@ -19,7 +21,6 @@ export const StyledMenu = styled.nav`
   left: 0;
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
-  border-radius: 20px;
 
   div {
     display: flex;
@@ -27,12 +28,13 @@ export const StyledMenu = styled.nav`
   }
 
   a {
-    font-size: 12px;
-    padding: 2rem 0;
+    font-size: 16px;
+    padding: 20px;
     letter-spacing: 0.5rem;
-    color: black;
+    color: white;
     text-decoration: none;
     transition: color 0.3s linear;
+    font-family: "Open Sans", sans-serif;
 
     &:hover {
       color: deeppink;
@@ -43,44 +45,74 @@ export const StyledMenu = styled.nav`
 const TextWrapper = styled.span`
   margin-left: 15px;
 `;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
+const StyledSpan = styled.span`
+  font-size: 12px;
+  padding: 20px;
+  letter-spacing: 0.5rem;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s linear;
+`;
 
 export default function MenuHamburger({ open }) {
   return (
     <>
       <StyledMenu open={open}>
-        <a href="/">
+        <StyledLink to="/standard">
+          {/* <a href="/"> */}
           <div>
             <span aria-label="standard vaccines">
               <Medicine width={30} />
             </span>
             <TextWrapper>Standard vaccines</TextWrapper>
           </div>
-        </a>
+          {/* </a> */}
+        </StyledLink>
 
-        <a href="/">
+        <StyledLink to="/trackvaccines">
+          {/* <a href="/"> */}
           <div>
             <span aria-label="track your vaccines">
               <Calendar width={25} />
             </span>
             <TextWrapper>Track your vaccines</TextWrapper>
           </div>
-        </a>
-        <a href="/">
+          {/* </a> */}
+        </StyledLink>
+        <StyledLink to="/faq">
+          {/* <a href="/"> */}
           <div>
             <span aria-label="faq">
-              <Faq width={30} />
+              <FaqIcon width={30} />
             </span>
             <TextWrapper>Faq</TextWrapper>
           </div>
-        </a>
-        <a href="/">
+          {/* </a> */}
+        </StyledLink>
+        <StyledLink to="/">
+          {/* <a href="/"> */}
           <div>
             <span aria-label="home">
               <House width={30} />
             </span>
             <TextWrapper>Home</TextWrapper>
           </div>
-        </a>
+          {/* </a> */}
+        </StyledLink>
+        <StyledLink to="/login">
+          {/* <a href="/"> */}
+          <div>
+            <span aria-label="login">
+              <Key width={25} />
+            </span>
+            <TextWrapper>My account</TextWrapper>
+          </div>
+          {/* </a> */}
+        </StyledLink>
       </StyledMenu>
     </>
   );

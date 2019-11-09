@@ -7,6 +7,7 @@ const CalendarInput = styled.input`
   color: grey;
   border: none;
   margin: 3px 5px 0 5px;
+  background: transparent;
 `;
 
 export default function SelectDate() {

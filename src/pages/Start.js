@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Logo from "../icons/Logo";
+// import Navigation from "../components/Navigation";
+// import MenuHamburger from "../components/MenuHamburger";
 
 const StartMain = styled.main`
   display: flex;

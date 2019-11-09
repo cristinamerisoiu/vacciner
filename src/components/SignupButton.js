@@ -5,9 +5,10 @@ const SignupButton = styled.button`
   height: 30px;
   border-radius: 10px;
   background-color: white;
-  box-shadow: #e1e1e1 solid 3px;
+  border: #707070 solid 1px;
   margin: 10px;
   opacity: 0.5;
+  font-weight: 700;
 `;
 
 export default SignupButton;

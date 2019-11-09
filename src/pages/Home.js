@@ -1,7 +1,10 @@
-// import React, { useState } from "react";
-// import MenuHamburger from "../components/MenuHamburger";
-// import NavbarHamburger from "../components/NavbarHamburger";
-// import styled from "styled-components";
+import React, { useState } from "react";
+import MenuHamburger from "../components/MenuHamburger";
+import Navigation from "../components/Navigation";
+import styled from "styled-components";
+import Logo from "../icons/Logo";
+import TextBox from "../components/TextBox";
+
 // import img from "../resources/DNA2.png";
 // // import ReactPlayer from "react-player";
 
@@ -68,9 +71,11 @@
 //   );
 // }
 
-import React from "react";
-import styled from "styled-components";
-import Logo from "../icons/Logo";
+const Text = styled.h4`
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+  color: #66023c;
+`;
 
 const StartMain = styled.main`
   display: flex;
@@ -82,11 +87,21 @@ const StartMain = styled.main`
 `;
 
 export default function Start() {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <StartMain>
+        <Navigation open={open} onClick={() => setOpen(!open)} />
+        <MenuHamburger open={open} />
         <Logo />
       </StartMain>
+      <TextBox>
+        <Text>
+          vaccine.log : provides you with the most important information about
+          vaccines at a glance. Keep track of your vaccines - painless and
+          straightforward.
+        </Text>
+      </TextBox>
     </>
   );
 }

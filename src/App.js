@@ -7,7 +7,6 @@ import TrackVaccines from "./pages/TrackVaccines";
 import Login from "./pages/Login";
 import Faq from "./pages/Faq";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Footer from "./components/Footer";
 import styled from "styled-components";
 
 const StyledApp = styled.main`
@@ -19,6 +18,8 @@ const StyledApp = styled.main`
 
 const Container = styled.div`
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
 `;
 
 function App() {
@@ -34,7 +35,6 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/faq" component={Faq} />
         </Container>
-        <Footer />
       </Router>
     </StyledApp>
   );
