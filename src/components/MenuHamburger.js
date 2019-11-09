@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Medicine from "../icons/Medicine";
 import Calendar from "../icons/Calendar";
 import FaqIcon from "../icons/FaqIcon";
-import House from "../icons/House";
 import { Link } from "react-router-dom";
 import Key from "../icons/Key";
 
@@ -13,7 +12,6 @@ export const StyledMenu = styled.nav`
   justify-content: center;
   background: #003459;
   height: 100%;
-  /* margin-top: 20px; */
   text-align: left;
   padding: 2rem;
   position: absolute;
@@ -49,69 +47,43 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-const StyledSpan = styled.span`
-  font-size: 12px;
-  padding: 20px;
-  letter-spacing: 0.5rem;
-  color: black;
-  text-decoration: none;
-  transition: color 0.3s linear;
-`;
-
 export default function MenuHamburger({ open }) {
   return (
     <>
       <StyledMenu open={open}>
         <StyledLink to="/standard">
-          {/* <a href="/"> */}
           <div>
             <span aria-label="standard vaccines">
               <Medicine width={30} />
             </span>
             <TextWrapper>Standard vaccines</TextWrapper>
           </div>
-          {/* </a> */}
         </StyledLink>
 
         <StyledLink to="/trackvaccines">
-          {/* <a href="/"> */}
           <div>
             <span aria-label="track your vaccines">
               <Calendar width={25} />
             </span>
             <TextWrapper>Track your vaccines</TextWrapper>
           </div>
-          {/* </a> */}
         </StyledLink>
         <StyledLink to="/faq">
-          {/* <a href="/"> */}
           <div>
             <span aria-label="faq">
               <FaqIcon width={30} />
             </span>
             <TextWrapper>Faq</TextWrapper>
           </div>
-          {/* </a> */}
         </StyledLink>
-        <StyledLink to="/">
-          {/* <a href="/"> */}
-          <div>
-            <span aria-label="home">
-              <House width={30} />
-            </span>
-            <TextWrapper>Home</TextWrapper>
-          </div>
-          {/* </a> */}
-        </StyledLink>
+
         <StyledLink to="/login">
-          {/* <a href="/"> */}
           <div>
             <span aria-label="login">
               <Key width={25} />
             </span>
             <TextWrapper>My account</TextWrapper>
           </div>
-          {/* </a> */}
         </StyledLink>
       </StyledMenu>
     </>

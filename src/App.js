@@ -1,6 +1,5 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
-import Start from "./pages/Start";
 import Home from "./pages/Home";
 import Standard from "./pages/Standard";
 import TrackVaccines from "./pages/TrackVaccines";
@@ -29,7 +28,6 @@ function App() {
       <Router>
         <Container>
           <Route exact path="/" component={Home} />
-          <Route exact path="/start" component={Start} />
           <Route path="/standard" component={Standard} />
           <Route path="/trackvaccines" component={TrackVaccines} />
           <Route path="/login" component={Login} />
