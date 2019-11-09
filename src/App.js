@@ -18,6 +18,8 @@ const StyledApp = styled.main`
 
 const Container = styled.div`
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
 `;
 
 function App() {

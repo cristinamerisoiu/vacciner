@@ -35,12 +35,12 @@ const StyledDiv = styled.div`
 `;
 
 export default function VaccineContent() {
-  const [diseases, setDiseases] = useState(false);
+  const [diseases, setDiseases] = useState([]);
 
   useEffect(() => {
     getDiseases()
       .then(response => {
-        console.log(response);
+        // console.log(response);
         setDiseases(response.data);
       })
       .catch(error => {

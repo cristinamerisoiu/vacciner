@@ -8,12 +8,13 @@ import { diseases } from "../api/diseases";
 import axios from "axios";
 // import DatePicker from "react-datepicker";
 import SelectDate from "../components/SelectDate";
+import Footer from "../components/Footer";
 
 const PageWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  flex-grow: 1;
   align-items: center;
+  display: flex;
+  flex-direction: column;
 `;
 
 const SearchDisease = styled.ul`
@@ -39,6 +40,9 @@ const ButtonAdd = styled.button`
   :hover {
     background-color: #008cba;
     color: white;
+  }
+  :active {
+    color: red;
   }
 `;
 
@@ -71,6 +75,7 @@ export default function TrackVaccines({ handleInputChange }) {
 
   const [startDate, setStartDate] = useState(new Date());
   const [data, setData] = useState([]);
+
   function addToDbJson(disease) {
     axios
       .post("/diseases", {
@@ -87,9 +92,9 @@ export default function TrackVaccines({ handleInputChange }) {
 
   useEffect(() => {
     axios
-      .get("/diseasesContent")
+      .get("/diseases")
       .then(resp => {
-        console.log(resp.data);
+        // console.log(resp.data);
         setData(resp.data);
       })
       .catch(error => {
@@ -140,18 +145,20 @@ export default function TrackVaccines({ handleInputChange }) {
         </DateWrapper>
 
         <ResultTextContainer>
-          return (
           <div>
             {/* {disease.disease} */}
-            <h4>Vaccine: {search}</h4>
+            <h4>Vaccine: </h4>
+            {data.map(disease => (
+              <p> {disease.disease} </p>
+            ))}
+
             <h4>Date:</h4>
           </div>
-          );
-          {/* {data.map(disease => {
-            
-          })} */}
         </ResultTextContainer>
       </PageWrapper>
+      <Footer />
     </>
   );
 }
+
+// split(-1)[0]
