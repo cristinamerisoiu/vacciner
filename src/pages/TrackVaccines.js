@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import ResultTextContainer from "../components/ResultTextContainer";
 import Headline from "../components/Headline";
 import SearchBar from "../components/SearchBar";
 import { diseases } from "../api/diseases";
-// import { diseasesFind } from "../api/diseasesFind";
 import axios from "axios";
-// import DatePicker from "react-datepicker";
 import SelectDate from "../components/SelectDate";
 import Footer from "../components/Footer";
 
@@ -55,7 +52,7 @@ const DateWrapper = styled.div`
   background-color: white;
   border: #707070 solid 1px;
   opacity: 0.5;
-  margin-top: 10px;
+  margin-top: 50px;
   padding: 7px;
   text-align: center;
   justify-content: center;
@@ -74,7 +71,7 @@ export default function TrackVaccines({ handleInputChange }) {
   );
 
   const [startDate, setStartDate] = useState(new Date());
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
   function addToDbJson(disease) {
     axios
@@ -95,7 +92,7 @@ export default function TrackVaccines({ handleInputChange }) {
       .get("/diseases")
       .then(resp => {
         // console.log(resp.data);
-        setData(resp.data);
+        // setData(resp.data);
       })
       .catch(error => {
         console.log(error);
@@ -104,7 +101,7 @@ export default function TrackVaccines({ handleInputChange }) {
 
   function handleClick(disease) {
     addToDbJson(disease);
-    alert(`${disease} added to your log`);
+    // alert(`${disease} added to your log`);
     console.log(`Link was clicked - data: ${disease}`);
   }
 
@@ -141,20 +138,9 @@ export default function TrackVaccines({ handleInputChange }) {
           <SelectDate
             selected={startDate}
             onChange={date => setStartDate(date)}
+            onClick={startDate}
           />
         </DateWrapper>
-
-        <ResultTextContainer>
-          <div>
-            {/* {disease.disease} */}
-            <h4>Vaccine: </h4>
-            {data.map(disease => (
-              <p> {disease.disease} </p>
-            ))}
-
-            <h4>Date:</h4>
-          </div>
-        </ResultTextContainer>
       </PageWrapper>
       <Footer />
     </>
