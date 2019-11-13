@@ -71,7 +71,6 @@ export default function TrackVaccines({ handleInputChange }) {
   );
 
   const [startDate, setStartDate] = useState(new Date());
-  // const [data, setData] = useState([]);
 
   function addToDbJson(disease) {
     axios
@@ -79,9 +78,7 @@ export default function TrackVaccines({ handleInputChange }) {
         disease,
         startDate
       })
-      .then(resp => {
-        console.log(resp.data);
-      })
+      .then(resp => {})
       .catch(error => {
         console.log(error);
       });
@@ -90,10 +87,7 @@ export default function TrackVaccines({ handleInputChange }) {
   useEffect(() => {
     axios
       .get("/diseases")
-      .then(resp => {
-        // console.log(resp.data);
-        // setData(resp.data);
-      })
+      .then(resp => {})
       .catch(error => {
         console.log(error);
       });
@@ -109,12 +103,6 @@ export default function TrackVaccines({ handleInputChange }) {
     setSearch(value);
     console.log(search);
   }
-
-  // function onChange(date) {
-  //   setDate(date);
-  //   console.log("the date was clicked");
-  // }
-  // const foundDisease = diseasesFind.find(disease => disease.id);
 
   return (
     <>
@@ -146,5 +134,3 @@ export default function TrackVaccines({ handleInputChange }) {
     </>
   );
 }
-
-// split(-1)[0]

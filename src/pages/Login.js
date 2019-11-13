@@ -36,16 +36,6 @@ export default function Login() {
     event.preventDefault();
   }
 
-  // onSubmit = event => {
-  //   event.preventDefault();
-  //   fetch("/api/authenticate", {
-  //     method: "POST",
-  //     body: JSON.stringify(),
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     }
-  //   });
-
   function validateForm() {
     return email.length > 0 && password.length > 0;
   }
