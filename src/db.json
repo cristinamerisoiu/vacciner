@@ -1,0 +1,101 @@
+{
+    "diseasesContent":[
+        {
+        "id":1,
+        "title":"Babies",
+        "vaccines":[
+            {
+                "href":"https://www.who.int/news-room/fact-sheets/detail/hepatitis-a",
+                "title":"Hepatitis A"
+            },
+            {
+                "href":"https://www.who.int/immunization/diseases/rotavirus/en/",
+                "title":"Rotavirus"
+            },
+            {
+                "href":"https://www.who.int/biologicals/vaccines/diphtheria/en/",
+                "title":"Diphtheria,tetanus & acellular pertussis"
+            },
+            {
+                "href":"https://www.who.int/news-room/fact-sheets/detail/rubella",
+                "title":"Measles, mumps, rubella"
+            },
+            {
+                "href":"https://www.who.int/immunization/diseases/varicella/en/",
+                "title":"Varicella"
+            },
+            {
+                "href":"https://www.who.int/news-room/fact-sheets/detail/hepatitis-b",
+                "title":"Hepatitis B"
+            },
+            {
+                "href":"https://www.who.int/topics/poliomyelitis/en/",
+                "title":"Poliomyelitis"
+            },
+            {
+                "href":"https://www.who.int/ith/diseases/HiB/en/",
+                "title":"Haemophilus"
+            },
+            {
+                "href":"https://www.who.int/biologicals/areas/vaccines/pneumo/en/",
+                "title":"Pnemococcal"
+            },
+            {
+                "href":"https://www.who.int/immunization/diseases/meningitis/en/",
+                "title":""
+            }
+        ]
+    },
+    {
+        "id":2,
+        "title":"Children 5-6 years old",
+        "vaccines":[
+            {
+                "href":"https://www.who.int/biologicals/vaccines/diphtheria/en/",
+                "title":"Diphtheria,tetanus & acellular pertussis"
+            }
+        ]
+    },
+    {
+        "id":2,
+        "title":"Youngsters 9-17 years old",
+        "vaccines":[
+            {
+                "href":"https://www.who.int/biologicals/vaccines/diphtheria/en/",
+                "title":"Diphtheria,tetanus & acellular pertussis"
+            },
+            {
+                "href":"https://www.who.int/topics/poliomyelitis/en/",
+                "title":"Poliomyelitis"
+            },
+            {
+                "text":"All the children vaccines as long as the diseases was not experienced or the vaccines weren't made"
+                
+            },
+            {
+                "href":"https://www.who.int/reproductivehealth/topics/cancers/hpv-vaccination/en/",
+                "title":"Vaccination against HPV for girls aged 12-17 years old"
+            }
+        ]
+    },
+    {
+        "id":2,
+        "title":"Adults",
+        "vaccines":[
+            {
+                "text":"Refresh of tetanus and diphtheria every 10 years."
+            }
+        ]
+    },
+    {
+        "id":2,
+        "title":"Adults over 60",
+        "vaccines":[
+            {
+                "text":"Additional vaccines for Infleunza (every year) and once for Pneumococcal."
+            }
+        ]
+    }
+    ]
+}
+
